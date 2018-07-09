@@ -17,6 +17,7 @@ public class InputOutputActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input_output);
         nameA = findViewById(R.id.nameA);
+        // closes Stream if failed
         try(InputStream input = getResources().openRawResource(R.raw.names)){
 
         BufferedReader br = new BufferedReader(new InputStreamReader(input));
